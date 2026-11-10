@@ -1,0 +1,1 @@
+This independent educational portfolio project uses publicly available FCA reporting data and is not an FCA publication, rating, or examination finding. Do not interpret statistical outliers as adverse findings about named institutions.
