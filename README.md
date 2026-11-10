@@ -65,7 +65,7 @@ python -m venv .venv
 .\.venv\Scripts\python.exe -m unittest discover -s tests -v
 ```
 
-The source code, raw public data archives, figures, and full report are part of the prepared upload package. Generated outputs appear in `output/validation/`. The legacy `real_fca_analysis.py` creates the **uncorrected** baseline and should not be interpreted on its own. `analyze.py` is an independent synthetic demonstration.
+The public repository includes the Python source and tests. **Download the four FCA quarterly ZIPs yourself** into `data/fca_raw/` before running; raw ZIPs and binary graphics are not hosted in this repository. Generated outputs appear in `output/validation/`. See [technical report summary](docs/TECHNICAL_REPORT.md) for validated figures and findings. The legacy `real_fca_analysis.py` creates the **uncorrected** baseline and should not be interpreted on its own. `analyze.py` is an independent synthetic demonstration.
 
 ## Project layout
 
@@ -75,8 +75,8 @@ The source code, raw public data archives, figures, and full report are part of 
 - `tests/`: reproducibility and integrity tests
 - `sql/`: SQL examples
 - `data/fca_raw/`: original public FCA quarterly archives
-- `figures/`: income-ratio and classification comparison charts
-- `docs/`: complete technical report
+- `docs/TECHNICAL_REPORT.md`: technical methods and validated results summary
+- Charts and binary report artifacts are available in the separate full project package, not hosted in this repository.
 - `output/`: generated local analysis, excluded from version control
 
 ## Limitations
