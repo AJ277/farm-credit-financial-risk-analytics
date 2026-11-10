@@ -1,0 +1,1 @@
+Download the four public FCA ZIP archives from https://www.fca.gov/bank-oversight/call-report-data-for-download and save as 2025December.zip, 2026March.zip, 2026June.zip, 2026September.zip in this folder. The source data is publicly available, but raw archives are omitted from this lightweight code repository. See the downloadable full project bundle for the source ZIPs.
