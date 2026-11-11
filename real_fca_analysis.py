@@ -4,6 +4,7 @@ The legacy income feature is intentionally retained to replicate the original
 analysis. Run validate_models.py afterward for corrected, authoritative results.
 """
 from pathlib import Path
+from contextlib import closing
 import csv
 import io
 import re
@@ -112,9 +113,10 @@ def build():
     scored.to_csv(OUT / "anomaly_screening.csv", index=False)
     scored.sort_values("anomaly_score").head(10).to_csv(
         OUT / "lowest_anomaly_scores.csv", index=False)
-    with sqlite3.connect(OUT / "fca_quarterly.sqlite") as db:
-        df.to_sql("financial_metrics", db, if_exists="replace", index=False)
-        scored.to_sql("anomaly_screening", db, if_exists="replace", index=False)
+    with closing(sqlite3.connect(OUT / "fca_quarterly.sqlite")) as db:
+        with db:
+            df.to_sql("financial_metrics", db, if_exists="replace", index=False)
+            scored.to_sql("anomaly_screening", db, if_exists="replace", index=False)
     print(f"Periods: {df.quarter.min()}–{df.quarter.max()} | "
           f"eligible lender rows: {len(df)} | excluded zero-loan rows: {len(excluded)} | "
           f"institutions: {df.institution_id.nunique()} | "
