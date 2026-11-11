@@ -65,7 +65,18 @@ python -m venv .venv
 .\.venv\Scripts\python.exe -m unittest discover -s tests -v
 ```
 
-The public repository includes the Python source and tests. **Download the four FCA quarterly ZIPs yourself** into `data/fca_raw/` before running; raw ZIPs and binary graphics are not hosted in this repository. Generated outputs appear in `output/validation/`. See [technical report summary](docs/TECHNICAL_REPORT.md) for validated figures and findings. The legacy `real_fca_analysis.py` creates the **uncorrected** baseline and should not be interpreted on its own. `analyze.py` is an independent synthetic demonstration.
+The public repository includes Python source, tests, the Word technical report, and selected charts. **Download the four FCA quarterly ZIPs yourself** into `data/fca_raw/` before running; the raw source archives are not hosted in this repository. Generated outputs appear in `output/validation/`. See [technical report summary](docs/TECHNICAL_REPORT.md) for validated figures and findings. The legacy `real_fca_analysis.py` creates the **uncorrected** baseline and should not be interpreted on its own. `analyze.py` is an independent synthetic demonstration.
+
+
+## Portfolio report and charts
+
+- [Full technical report (Word)](docs/Farm%20Credit%20System%20Quarterly%20Financial%20Anomaly%20Screening%20project.docx)
+- [Technical methodology and findings (Markdown)](docs/TECHNICAL_REPORT.md)
+- [Income-ratio comparison](figures/ratio_comparison.png)
+- [Original vs. corrected anomaly classifications](figures/anomaly_classification_comparison.png)
+- [Financial-ratio visualization](figures/financial_ratios.png)
+
+The linked technical report is a Microsoft Word document; select **Download raw file** on GitHub if the browser does not preview it.
 
 ## Project layout
 
@@ -76,7 +87,8 @@ The public repository includes the Python source and tests. **Download the four 
 - `sql/`: SQL examples
 - `data/fca_raw/`: original public FCA quarterly archives
 - `docs/TECHNICAL_REPORT.md`: technical methods and validated results summary
-- Charts and binary report artifacts are available in the separate full project package, not hosted in this repository.
+- `docs/Farm Credit System Quarterly Financial Anomaly Screening project.docx`: complete Word technical report
+- `figures/`: three published analysis charts
 - `output/`: generated local analysis, excluded from version control
 
 ## Limitations
