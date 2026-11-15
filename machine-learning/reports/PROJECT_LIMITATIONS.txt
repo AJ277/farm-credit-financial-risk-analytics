@@ -1,0 +1,34 @@
+FCA EDUCATIONAL RISK CLASSIFICATION
+===================================
+
+PROJECT PURPOSE
+Demonstrate classification, model evaluation,
+MLflow experiment tracking, and SHAP explanations.
+
+DATA
+177 observations representing 59 institutions
+across 2026 Q1-Q3.
+
+EDUCATIONAL LABELS
+Labels are derived from illustrative financial
+ratio screening thresholds calculated from
+2026 Q1 observations.
+
+The classification target is not a verified
+default, distress, or supervisory outcome.
+
+MODEL VALIDATION
+141 training observations from 47 institutions.
+36 testing observations from 12 institutions.
+No institution overlap between sets.
+
+IMPORTANT LIMITATIONS
+- Model evaluation measures reproduction of a
+  rule-derived educational classification.
+- High accuracy does not establish the ability
+  to predict real institutional financial distress.
+- SHAP explains model behavior, not causation.
+- The evaluation uses one grouped holdout split.
+- Results are not FCA examination findings.
+- This is an independent educational project,
+  not affiliated with or endorsed by the FCA.
